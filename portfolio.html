@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+        rel="stylesheet">
+    <title>
+        Portfolio
+    </title>
+    <style>
+        body {
+            color: white;
+            background: linear-gradient(to bottom, black 0%, black 1000px, transparent 1000px);
+        }
+
+        .topbar {
+
+
+            height: 100px;
+            display: grid;
+            grid-template-columns: 170px 1fr 200px;
+            align-items: center;
+            background-color: black;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+
+            z-index: 100;
+
+
+
+        }
+
+
+        .logo {
+            font-size: 70px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px, 30px, 20px, 30px;
+            margin: 20px;
+            margin-right: 40px;
+        }
+
+
+
+        .options {
+            font-size: 11px;
+            font-family: sans-serif;
+
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.7);
+            flex: 1;
+            justify-content: space-between;
+            align-content: center;
+            white-space: nowrap;
+
+        }
+
+        .middle {
+            display: flex;
+            flex-direction: row;
+            column-gap: 20px;
+            transition: 0.5s;
+            justify-content: space-between;
+
+        }
+
+
+        @media(max-width: 900px) {
+            .topbar .socials {
+
+                display: none;
+                transition: 0.5s;
+            }
+
+            .topbar .middle {
+                margin-right: -200px;
+                display: flex;
+
+            }
+        }
+
+        @media (max-width: 830px) {
+            .topbar .middle {
+                display: none;
+                transition: 1s;
+            }
+
+            .topbar .menu {
+                margin-right: -90px;
+                display: flex;
+                transition: 1s;
+            }
+
+            .topbar .logo {
+                font-size: 20px;
+                transition: 1s;
+
+            }
+
+            .topbar .socials {
+                display: none;
+            }
+
+        }
+
+
+        .menu {
+            display: none;
+            align-items: end;
+            justify-content: flex-end;
+            margin-right: 10px;
+
+        }
+
+        .menuimg {
+            width: 20px;
+        }
+
+        .intro {
+            background-color: black;
+            height: 800px;
+            margin-top: 200px;
+            margin-left: 150px;
+
+            z-index: 20;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .intro .left {
+            width: 50%;
+        }
+
+        .about {
+
+
+            font-size: 80px;
+            font-family: 'Roboto Serif', sans-serif;
+            font-weight: 500;
+            margin-top: 20px;
+            z-index: 20;
+            position: relative;
+            transition: all 0.5s;
+        }
+        @media (max-width:1400px) {
+            .about {
+                font-size: 70px;
+            } 
+        }
+        @media (max-width:1300px) {
+            .about {
+                font-size: 65px;
+            } 
+        }
+
+        @media (max-width:1200px) {
+            .about {
+                font-size: 60px;
+            }
+
+            
+        }
+
+        @media (max-width:1100px) {
+            .about {
+                font-size: 55px;
+            }
+
+           
+        }
+
+        @media (max-width:1000px) {
+            .about {
+                font-size: 50px;
+            }
+         
+        }
+
+
+        @media (max-width:900px) {
+            .about {
+                font-size: 45px;
+            }
+          
+        }
+
+
+        @media (max-width:800px) {
+            .about {
+                font-size: 40px;
+            }
+         
+        }
+
+        .hello {
+            font-size: 18px;
+            color: rgb(255, 0, 0);
+            font-family: 'Roboto Serif', sans-serif;
+            position: relative;
+            z-index: 20;
+        }
+
+        .profile {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 100%;
+            position: relative;
+
+            margin-top: 40px;
+            margin-left: -100px;
+            z-index: 0;
+            align-items: center;
+            transition: all 0.5s;
+        }
+        @media (max-width:1200px) {
+            .profile {
+                width: 400px;
+                height: 400px;
+            }
+        }
+        @media (max-width:1100px) {
+            .profile {
+                width: 380px;
+                height: 380px;
+            }
+        }
+        @media (max-width:1000px) {
+            .profile {
+                width: 350px;
+                height: 350px;
+            }
+        }
+        @media (max-width:900px) {
+            .profile {
+                width: 300px;
+                height: 300px;
+            }
+        }
+        @media (max-width:800px) {
+            .profile {
+                width: 280px;
+                height: 280px;
+            }
+        }
+
+
+
+        .socials {
+            width: 100px;
+
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+
+
+        .scroll {
+
+            font-family: 'Roboto Serif', sans-serif;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 12px;
+            margin-top: 150px;
+        }
+
+        .line {
+            border-top: 3px solid white;
+            width: 50%;
+
+        }
+
+        .aboutme {
+            background-color: rgb(238, 235, 235);
+            height: 1000px;
+            color: black;
+
+            margin-left: 100px;
+            margin-top: 100px;
+            margin-right: 100px;
+            display: flex;
+            flex-direction: column;
+
+
+        }
+
+        .aboutme .line {
+            border-top: 3px solid rgb(195, 2, 2);
+            width: 150px;
+            white-space: nowrap;
+            padding-top: 30PX;
+            font-family: sans-serif;
+            font-weight: 500;
+            letter-spacing: 4px;
+            font-size: 30px;
+
+        }
+
+
+        .content .left {
+            width: 50%;
+            font-size: 28px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="logo">
+            SKJ
+        </div>
+        <div class=" middle">
+            <div class="options">INTRO </div>
+            <div class="options">ABOUT</div>
+            <div class="options">SKILLS</div>
+            <div class="options">WORK</div>
+            <div class="options">CERTIFICATES</div>
+            <div class="options">SAY HELLO</div>
+
+        </div>
+
+        <div class="menu">
+            <button class="menu">
+                <img class="menuimg" src="/hamburger-menu.svg" alt="">
+            </button>
+        </div>
+
+        <div class="socials">
+            <img class="socials" src="Screenshot 2024-02-11 at 2.16.54 AM.png">
+
+        </div>
+
+    </div>
+    <div class="intro">
+        <div class="left">
+            <div class="hello">
+                Hello ,I'm Samriddh Kumar
+            </div>
+            <div class="about">
+                2nd Year Student From IIIT Vadodara. Eager to make an impact in the digital realm.
+            </div>
+            <div class="scroll">
+
+                SCROLL FOR MORE
+                <div class="line"></div>
+            </div>
+
+        </div>
+        <div class="right">
+            <img class="profile" src="WhatsApp Image 2024-02-14 at 15.19.10.jpeg">
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <div class="aboutme">
+
+        <div class="line">ABOUT ME</div>
+        <div class="content">
+            <div class="left">
+                Hello! I am a recent graduate with a Bachelor of Engineering in Computer Science. I am passionate about
+                using my skills and knowledge to develop innovative solutions to complex problems. As a computer science
+                student, I had the opportunity to work on a variety of projects and gain experience in various
+                technologies
+                and programming languages. I am excited to continue learning and growing as I embark on my career in the
+                tech industry.
+            </div>
+            <div class="right"></div>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+
+
+
+</html>
